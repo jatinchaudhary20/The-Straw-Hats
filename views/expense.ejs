@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/expense.css">
+    <title>Category List</title>
+</head>
+<body>
+    <h1><%=Category%>'s Other expense</h1>
+
+    <ul>
+        <form action="/Goto" method="post">
+        <% for(var i=0;i<category.length; i++){  %>
+        <button type="submit" name="checkbox" value="<%= category[i].CategoryName%>" class="delcheck">Open</button>
+            <li><%= category[i].CategoryName%></li>
+        <% } %>
+    </form>
+    </ul>
+    <form action="/Graph" method="post">
+        <button type="submit" class="btn">SUM All</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/Category.css">
+</head>
+<body>
+<form action="/main" method="post">
+<button type="submit" class="btn">HOME</button>
+</form>
+
+<h3><%=Cname%></h3>
+<div class="todo-container">
+    <h1><%=Uname%>'s</h1>
+    <h1>Daily Transaction</h1>
+    <form action="/deleteexpense" method="post">
+    <% for(var i=0;i<item.length; i++){ %>
+    <div class="item">
+    <button type="submit" name="checkboxdata" value="<%= item[i]._id %>"class="delcheck">Delete</button>
+    <p style="font-size: 1.2rem;"><%=item[i].Transaction%></p>
+</div>
+    <%  } %> 
+    <input type="hidden" name="itemname" value="<%=Uname%>" checked></input>
+</form>
+    <form id="todo-form" action="/addexpense" method="post">
+        <input type="text" id="todo-input" name="transaction" placeholder="Add a new Transaction" required></input>
+        <button type="submit" class="addbtn">Add</button>
+        <input type="hidden" name="categoryname" value="<%=Uname%>"></input>
+        <h4>The Sum Is <%=Sname%></h4>
+    </form>  
+</div>
+
+</body>
+</html>

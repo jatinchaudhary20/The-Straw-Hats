@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+  <canvas id="myChart" style="width:100%;max-width:60%"></canvas>
+
+  <script>
+  const xValues='<%=x%>';
+  const yValues='<%=y%>';
+  const barColors ="red";
+  new Chart("myChart", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          barPercentage: 20,
+        },
+      },
+      legend: {display: false},
+      title: {
+        display: true,
+        text: "Various Expense"
+      }
+    }
+  });
+  </script>
+
+</body>
+</html>

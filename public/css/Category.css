@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.todo-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #3498db;
+}
+
+#todo-form {
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addbtn {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+  }
+  .delcheck{
+    margin-right: 4rem;
+  }
+  .btn{
+    position: absolute;
+    top: 7px;
+    background-color: rgb(74, 197, 218);
+    width: 80px;
+    height: 50px;
+  }
+  .btn2{
+    position: absolute;
+    top: 7px;
+    left: 500px;
+    background-color: rgb(74, 197, 218);
+    width: 80px;
+    height: 50px;
+  }
+  .inp{
+    position: absolute;
+    top: 7px;
+    left: 400px;
+    
+    width: 80px;
+    height: 20px;
+  }
+  h3{
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 3px;
+  }
+  .btn3{
+    position: absolute;
+    bottom:10%;
+    background-color: rgb(74, 197, 218);
+    width: 80px;
+    height: 50px;
+  }
+  .btn3inp{
+    position: absolute;
+    bottom:10%;
+    left: 52%;
+    width: 80px;
+    height: 30px;
+  }
+  .btn4{
+    position: absolute;
+    bottom:10%;
+    right: 13%;
+    background-color: rgb(74, 197, 218);
+    width: 80px;
+    height: 50px;
+  }

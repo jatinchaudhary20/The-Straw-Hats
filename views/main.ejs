@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<form action="/logout" method="post">
+<button type="submit" class="btn">LogOut</button>
+</form>
+<form action="/currency" method="post">
+ <input type="text" name="Currency" class="inp" required></input>   
+<button type="submit" class="btn2">Check!</button>
+</form>
+<h3><%=Cname%></h3>
+<div class="todo-container">
+    <h1><%=Uname%>'s</h1>
+    <h1>Daily Transaction</h1>
+    <form action="/delete" method="post">
+    <% for(var i=0;i<item.length; i++){ %>
+    <div class="item">
+    <input type="checkbox" name="checkbox" value="<%= item[i]._id %>" onChange="this.form.submit()" class="delcheck"></input>
+    <p style="font-size: 1.2rem;"><%=item[i].Transaction%></p>
+</div>
+    <%  } %> 
+</form>
+    <form id="todo-form" action="/dataentry" method="post">
+        <input type="text" id="todo-input" name="transaction" placeholder="Add a new Transaction" required ></input>
+        <button type="submit" class="addbtn">Add</button>
+        <h4>The Sum Is <%=Sname%></h4>
+    </form>  
+</div>
+<form action="/addmore" method="post">
+    <input type="text" id="category" name="category" class="btn3inp" required>
+    <button type="submit" class="btn3">Add More!</button>
+</form>
+<form action="/show" method="post">
+    <button type="submit" class="btn4">Show all</button>
+</form>
+</body>
+</html>
